@@ -26,7 +26,7 @@ class PersonalBookmarkViewSet(viewsets.ModelViewSet):
     serializer_class = PersonalBookmarkSerializer
     queryset = PersonalBookmark.objects.none()
 
-    def get_query(self):
+    def get_queryset(self):
         user = self.request.user
         if user.is_anonymous:
             return PersonalBookmark.objects.none()
