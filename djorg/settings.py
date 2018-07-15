@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'notes',
     'bookmarks',
+    'graphene_django',
     'rest_framework',
     'rest_framework.authtoken',
     'django.contrib.admin',
@@ -157,3 +158,6 @@ CORS_ORIGIN_WHITELIST = (
     '127.0.0.1:9000',
     'jovial-albattani-251b65.netlify.com'
 )
+GRAPHENE = {
+    'SCHEMA': 'notes.schema.schema' #format dir.file.varname
+}
